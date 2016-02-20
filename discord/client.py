@@ -637,7 +637,7 @@ class Client(object):
 
         channel_id = self._resolve_destination(destination)
 
-        content = str(content)
+        content = unicode(content)
         mentions = self._resolve_mentions(content, mentions)
 
         url = '{base}/{id}/messages'.format(base=endpoints.CHANNELS, id=channel_id)
